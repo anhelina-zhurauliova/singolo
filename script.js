@@ -10,15 +10,7 @@ window.onload = function () {
   const portfolio = document.querySelector('[href*=portfolio]');
   const about = document.querySelector('[href*=about]');
   const contacts = document.querySelector('[href*=contact]');
-  console.log(contacts)
-
-  for (let i = 0; i < links.length; i++) {
-    links[i].addEventListener('click', (event) => {
-      links[i].classList.remove('active');
-      event.target.classList.add('active');
-
-    })
-  }
+  const slider2 = document.querySelector(".slider_2")
 
   for (let i = 0; i < links.length; i++) {
     links[i].addEventListener('click', function (e) {
@@ -39,7 +31,6 @@ window.onload = function () {
   document.addEventListener('scroll', onScroll);
   function onScroll(event) {
     const curPos = window.scrollY;
-    console.log(curPos)
     anchors.forEach((el) => {
       if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
         links.forEach((a) => {
@@ -60,10 +51,10 @@ window.onload = function () {
           else if (curPos >= 1100 && curPos <= 1969) {
             portfolio.classList.add("active")
           }
-          else if (curPos >= 1970 && curPos <= 2703) {
+          else if (curPos >= 1970 && curPos <= 2395) {
             about.classList.add("active")
           }
-          else if (curPos > 2704) {
+          else if (curPos > 2396) {
             contacts.classList.add("active")
           }
         })
@@ -115,13 +106,24 @@ window.onload = function () {
     if (isEnabled) {
       previousItem(currentItem)
     }
-    sliderBackground.classList.toggle('blue')
+    if (slider2.classList.contains("showed")) {
+      sliderBackground.classList.remove('blue')
+    }
+    else {
+      sliderBackground.classList.add('blue')
+    }
+
   });
   btn_next.addEventListener('click', function () {
     if (isEnabled) {
       nextItem(currentItem)
     }
-    sliderBackground.classList.toggle('blue')
+    if (slider2.classList.contains("showed")) {
+      sliderBackground.classList.remove('blue')
+    }
+    else {
+      sliderBackground.classList.add('blue')
+    }
   })
 
   // BLOCKED SCREEN

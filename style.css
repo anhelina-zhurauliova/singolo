@@ -88,7 +88,9 @@ select {
 .hamburger {
   display: none;
 }
-
+main {
+  background-color: rgb(45, 48, 58);
+}
 /*  HEADER   */
 header {
   width: 100%;
@@ -221,6 +223,7 @@ h1 > span {
   position: absolute;
   left: 0;
   width: 85%;
+  top: -36px;
 }
 .red {
   background-color: #f06c64;
@@ -252,6 +255,9 @@ h1 > span {
   background-repeat: no-repeat;
   border-radius: 12% / 6%;
   background-size: cover;
+}
+.iphone:hover {
+  cursor: pointer;
 }
 /* VERTICAL PHONE */
 .iphone_vertical_container {
@@ -1051,6 +1057,10 @@ textarea {
   }
 }
 @media (min-width: 767px) and (max-width: 768px) {
+  .message {
+    top: 115px;
+    left: 23%;
+  }
   .images_slider_container {
     height: 53vw;
     margin-top: 40px;
@@ -1065,7 +1075,7 @@ textarea {
 @media (min-width: 320px) and (max-width: 767px) {
   .section_title_portfolio {
     padding-left: 29px;
-    padding-top: 50px;
+    padding-top: 54px;
   }
   .section__portfolio_text {
     margin-left: 29px;
@@ -1138,7 +1148,7 @@ textarea {
   }
   h1 {
     margin-top: 8px;
-    margin-left: 110px;
+    margin-left: 40%;
     font-size: 20px;
     justify-content: center;
     align-items: center;
@@ -1194,8 +1204,10 @@ textarea {
     transition: 0.5s;
     transform: rotate(180deg);
   }
+  .blur {
+    opacity: 0.4;
+  }
   .navigation_bar {
-    display: none;
     position: fixed;
     top: -6%;
     left: 0;
@@ -1204,11 +1216,15 @@ textarea {
     background-color: #2d303a;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
     z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.2s, opacity 0.2s linear;
   }
 
   .navigation_bar_showed {
-    transition: 2s;
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.8s;
   }
 
   .navigation {
@@ -1255,6 +1271,8 @@ textarea {
   }
   .employee {
     width: 100%;
+    flex-direction: column;
+    align-content: center;
   }
   .employee__photo {
     width: 310px;
@@ -1355,12 +1373,54 @@ textarea {
     max-height: 128px;
   }
 }
+@media (max-width: 375px) {
+  .message {
+    margin-left: 16%;
+    width: 269px;
+    left: -1%;
+  }
+  .pop_up_message > p:first-child {
+    margin-left: -88px;
+  }
+  .close_button {
+    margin-top: 140px;
+    margin-left: 117px;
+  }
+  .phone_container {
+    margin-top: 15px;
+  }
+  .mail_container {
+    margin-top: 15px;
+  }
+  .contact_info {
+    padding-top: 16px;
+  }
+  textarea {
+    margin-bottom: 7px;
+  }
+  form {
+    margin-top: 25px;
+  }
+  h1 {
+    margin-left: 110px;
+  }
+  .logo2 {
+    margin-top: 32px;
+    margin-left: 90px;
+  }
+  .employee {
+    align-content: unset;
+  }
+}
 @media (min-width: 320px) and (max-width: 350px) {
+  h1 {
+    margin-left: 78px;
+  }
   .slider_2 {
     top: -11px;
   }
   .employee {
-    margin-right: 40px;
+    margin-right: 67px;
   }
   .tags {
     width: 276px;

@@ -12,13 +12,19 @@
 <body>
 	<div class="main_wrapper">
 		<header class="header">
-			<div class="wrapper">
+			<div class="header__wrapper">
+				<div class="hamburger">
+					<span class="hamburger-line"></span>
+					<span class="hamburger-line"></span>
+					<span class="hamburger-line"></span>
+				</div>
 				<div class="logo">
 					<h1>Singolo<span>*</span>
 					</h1>
 				</div>
 				<nav class="navigation_bar">
-					<ul class="navigation">
+					<p class="logo2">Singolo<span>*</span></p>
+					<ul class="navigation" id="navigation">
 						<li>
 							<a class="nav_links active" href="#header">Home</a>
 						</li>
@@ -36,37 +42,32 @@
 						</li>
 					</ul>
 				</nav>
+				</div>
 			</div>
 		</header>
 		<main>
 			<section class="slider red anchor" id="header">
-				<div class="wrapper slider__container">
-					<div class="left_slider__button">
-						<button class="button left_button">
-							<img class="arrow arrow_left" src="assets/left_arrow.png" alt="arrow">
-						</button>
-					</div>
-					<div class="slider__images__container">
-						<div class="images_slider showed">
-							<div class="iphone_vertical_container ">
-								<img class="vertical_image" src="assets/vertical.png" alt="vertical phone">
-								<img class="shadow_vertical" src="assets/phone-vertical-shadow.png" alt="shadow">
-								<img class="vertical_screen" src="assets/screen_vertical.png" alt="screen vertical">
+				<div class="wrapper">
+					<div class="slider__container">
+							<button class="button left_button">
+								<img class="arrow arrow_left" src="assets/left_arrow.png" alt="arrow">
+							</button>
+							<div class="images_slider_container">
+								<div class="images_slider slider_1 showed">
+									<div class="iphone iphone_vertical_container">
+										<img class="vertical_screen" src="assets/screen_vertical.png" alt="screen vertical" style="display: inherit">
+									</div>
+									<div class="iphone iphone_horizontal_container">
+										<img class="horizontal_screen" src="assets/screen_hotizontal.png" alt="screen horizontal" style="display: inherit">
+									</div>
+								</div>
+								<img class="images_slider slider_2" src="assets/slide_2.png">
 							</div>
-							<div class="iphone_horizontal_container">
-								<img class="horizontal_image" src="assets/horizontal.png" alt="hotizontal phone">
-								<img class="horizontal_shadow" src="assets/phone-horizontal-shadow.png" alt="shadow">
-								<img class="horizontal_screen" src="assets/screen_hotizontal.png" alt="screen horizontal">
-							</div>
-						</div>
-						<img class="images_slider slider_2" src="assets/slide_2.png">
+								<button class="button right_button">
+									<img class="arrow" src="assets/right_arrow.png" alt="arrow">
+								</button>
+				
 					</div>
-					<div class="right_slider__button">
-						<button class="button right_button">
-							<img class="arrow" src="assets/right_arrow.png" alt="arrow">
-						</button>
-					</div>
-
 				</div>
 			</section>
 			<section class="services anchor" id="services">
@@ -181,44 +182,44 @@
 							</li>
 						</ul>
 					</nav>
-					<div class="portfolio__images">
-						<div class="image_portfolio">
+					<ul class="portfolio__images" id="portfolio__images">
+						<li class="image_portfolio">
 							<img src="assets/image_1.png" alt="1" />
-						</div>
-						<div class="image_portfolio">
+						</li>
+						<li class="image_portfolio">
 							<img src="assets/image_2.png" alt="2" />
-						</div>
-						<div class="image_portfolio">
+						</li>
+						<li class="image_portfolio">
 							<img src="assets/image_3.png" alt="3" />
-						</div>
-						<div class="image_portfolio">
+						</li>
+						<li class="image_portfolio">
 							<img src="assets/image_4.png" alt="4" />
-						</div>
-						<div class="image_portfolio">
+						</li>
+						<li class="image_portfolio">
 							<img src="assets/image_5.png" alt="5" />
-						</div>
-						<div class="image_portfolio">
+						</li>
+						<li class="image_portfolio">
 							<img src="assets/image_6.png" alt="6" />
-						</div>
-						<div class="image_portfolio">
+						</li>
+						<li class="image_portfolio">
 							<img src="assets/image_7.png" alt="7" />
-						</div>
-						<div class="image_portfolio">
+						</li>
+						<li class="image_portfolio">
 							<img src="assets/image_8.png" alt="8" />
-						</div>
-						<div class="image_portfolio">
+						</li>
+						<li class="image_portfolio">
 							<img src="assets/image_9.png" alt="9" />
-						</div>
-						<div class="image_portfolio">
+						</li>
+						<li class="image_portfolio">
 							<img src="assets/image_10.png" alt="10" />
-						</div>
-						<div class="image_portfolio">
+						</li>
+						<li class="image_portfolio">
 							<img src="assets/image_11.png" alt="11" />
-						</div>
-						<div class="image_portfolio">
+						</li>
+						<li class="image_portfolio">
 							<img src="assets/image_12.png" alt="12" />
-						</div>
-					</div>
+						</li>
+					</ul>
 				</div>
 			</section>
 			<section class="about-us anchor" id="about">
@@ -300,7 +301,7 @@
 								placeholder="Subject" /><br />
 							<textarea name="description" maxlength="200" class="textarea_description"
 								placeholder="Describe your project in detail..." style="resize: none;"></textarea><br />
-							<input id="submit" type="submit" value="submit" /><br />
+							<input id="submit" type="submit" value="send" /><br />
 						</form>
 						<div class="contact_info">
 							<h3 class="contact_info__title">Contact Information</h3>

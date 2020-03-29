@@ -1051,9 +1051,6 @@ textarea {
   }
 }
 @media (min-width: 767px) and (max-width: 768px) {
-  .logo2 {
-    display: block;
-  }
   .images_slider_container {
     height: 53vw;
     margin-top: 40px;

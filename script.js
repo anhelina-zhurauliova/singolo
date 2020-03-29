@@ -4,7 +4,6 @@ window.onload = function() {
   const HAMBURGER = document.querySelector(".hamburger");
   const navBar = document.querySelector(".navigation_bar");
   const wrap = document.querySelectorAll("section");
-  console.log(wrap);
   HAMBURGER.addEventListener("click", event => {
     if (navBar.classList.contains("navigation_bar_showed")) {
       HAMBURGER.classList.add("hamburger-back");
@@ -26,6 +25,7 @@ window.onload = function() {
       links[i].addEventListener("click", function(e) {
         HAMBURGER.classList.add("hamburger-back");
         navBar.classList.remove("navigation_bar_showed");
+        wrap.forEach(e => e.classList.remove("blur"));
       });
     }
   });

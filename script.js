@@ -3,17 +3,33 @@ window.onload = function() {
 
   const HAMBURGER = document.querySelector(".hamburger");
   const navBar = document.querySelector(".navigation_bar");
-
+  const wrap = document.querySelectorAll("section");
+  console.log(wrap);
   HAMBURGER.addEventListener("click", event => {
     if (navBar.classList.contains("navigation_bar_showed")) {
       HAMBURGER.classList.add("hamburger-back");
       navBar.classList.remove("navigation_bar_showed");
+      wrap.forEach(e => e.classList.remove("blur"));
     } else {
       HAMBURGER.classList.remove("hamburger-back");
       HAMBURGER.classList.add("hamburger-transformed");
+      wrap.forEach(e => e.classList.add("blur"));
       navBar.classList.add("navigation_bar_showed");
     }
+    if (navBar.classList.contains("navigation_bar_showed")) {
+      navBar.classList.add("links_burger");
+    } else {
+      navBar.classList.remove("links_burger");
+    }
+    header.classList.remove("smaller");
+    for (let i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", function(e) {
+        HAMBURGER.classList.add("hamburger-back");
+        navBar.classList.remove("navigation_bar_showed");
+      });
+    }
   });
+  // });
 
   const header = document.querySelector("header");
   const navigation = document.querySelector(".navigation");
